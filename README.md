@@ -2,8 +2,8 @@
 Projeto de sistemas distribuídos. O objetivo do trabalho é utilizar um serviço com estilo arquitetural REST.
 
 # Preparando ambiente e instalando pacotes
-python3 -m venv env
-source env/bin/activate ou  .\env\Scripts\activate no windows
+python3 -m venv env<br/>
+source env/bin/activate <br/>ou <br/> .\env\Scripts\activate no windows<br/>
 pip install -r .\requirements.txt
 
 # Para rodar a aplicação
