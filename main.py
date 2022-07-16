@@ -40,8 +40,14 @@ def atualizar_livro(idLivro):
 
 @app.route('/livros/criar/<titulo>/<autor>')
 def criar_livro(titulo, autor):
+
+    if (len(livros) == 0):
+        id = 0
+    else:
+        id = livros[-1]['id'] + 1
+
     livro = {
-        'id': livros[-1]['id'] + 1,
+        'id': id,
         'titulo': titulo,
         'autor': autor
     }
