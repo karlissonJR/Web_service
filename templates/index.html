@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros</title>
+</head>
+<body>
+
+    <h1>Lista de livros</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for livro in data %}
+                <tr>
+                    <td>{{livro.titulo}}</td>
+                    <td>{{livro.autor}}</td>
+                    <td><a href="/livros/{{livro.id}}">acessar</a></td>
+                    <td><a href="/livros/{{livro.id}}/atualizar">atualizar</a></td>
+                    <td><a href="/livros/{{livro.id}}/deletar">deletar</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <button onclick="addLivro()">Adicionar um livro novo</button>
+
+    <script>
+        function addLivro() {
+            window.location.href = "/livros/novo"
+        }
+    </script>
+
+</body>
+</html>
